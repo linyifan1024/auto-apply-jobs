@@ -13,14 +13,19 @@ class User(models.Model):
     def __str__(self):
         return self.name
 
+# linkdingin, indeed, glassdoor, etc
+# exmaple: google, google.com, google.png, user, name, email, password
 class Platform(models.Model):
     name = models.CharField(max_length=50)
     website = models.CharField(max_length=100)
     logo = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
     def __str__(self):
         return self.name
-    
+# example: software engineer, google, description, linkedin, link, false, 2021-01-01
 class Job(models.Model):
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
