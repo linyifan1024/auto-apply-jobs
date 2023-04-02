@@ -7,15 +7,19 @@ from django.db import models
 # each job contains a title, company, description, and platform, and a link to the job posting, applied boolean, and date applied
 # User -> Profile -> Platform -> Job 
 class User(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    def __str__(self):
-        return self.name
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, unique=True, null=False)
+    email = models.CharField(max_length=100, unique=True, null=False)
+    password = models.CharField(max_length=100, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    # def __str__(self):
+    #     return self.name
 
 # linkdingin, indeed, glassdoor, etc
-# exmaple: google, google.com, google.png, user, name, email, password
+# exmaple: linkedin, linkedin.com, linkedin.png, user,
 class Platform(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     website = models.CharField(max_length=100)
     logo = models.CharField(max_length=100)
@@ -24,8 +28,10 @@ class Platform(models.Model):
     password = models.CharField(max_length=100)
     def __str__(self):
         return self.name
+
 # example: software engineer, google, description, linkedin, link, false, 2021-01-01
 class Job(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
     description = models.TextField()
