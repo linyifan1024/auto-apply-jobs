@@ -5,8 +5,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
-username = "linyifan1024@yahoo.com"
-password = "lyf19951024"
+username = ""
+password = ""
 def launchBrower(username, password):
 
     chrome_driver_path = "C:/Users/linyi/chromedriver"
