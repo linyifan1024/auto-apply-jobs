@@ -8,8 +8,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Testing Reacy Code</h1>
+      <div className="home-page">
+        <h1 className="home-page-title">Auto Apply for your jobs </h1>
+        <p className="home-page-text">This is a sample home page for my app.</p>
+        <p className="home-page-text">
+          You can customize this page to fit your needs.
+        </p>
       </div>
     );
   }
