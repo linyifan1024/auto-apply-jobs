@@ -28,6 +28,7 @@ module.exports = {
         // If you are running "npm run dev", keep the JSON.stringify("development"),
         // if you are running "npm run build" ,change it to JSON.stringify("production").
         NODE_ENV: JSON.stringify("development"),
+        // NODE_ENV: JSON.stringify("production"),
       },
     }),
   ],
