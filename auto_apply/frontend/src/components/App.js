@@ -3,6 +3,9 @@ import { render } from "react-dom";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import RegisterPage from "./RegisterPage";
+import Glassdoor from "./Glassdoor";
+import Indeed from "./Indeed";
+import Linkedin from "./Linkedin";
 import {
   BrowserRouter,
   Router,
@@ -22,7 +25,10 @@ export default class App extends Component {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/linkedin" element={<Linkedin />} />
+            <Route path="/glassdoor" element={<Glassdoor />} />
+            <Route path="/indeed" element={<Indeed />} />
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </BrowserRouter>

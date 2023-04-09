@@ -29,13 +29,13 @@ export default class NavBar extends Component {
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link eventKey="link-1">Linkedin</Nav.Link>
+            <Nav.Link href="/linkedin">Linkedin</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link eventKey="link-2">Glassdoor</Nav.Link>
+            <Nav.Link href="/glassdoor">Glassdoor</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link eventKey="link-2">Indeed</Nav.Link>
+            <Nav.Link href="/indeed">Indeed</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
             <Link to="/register" className="nav-link">
