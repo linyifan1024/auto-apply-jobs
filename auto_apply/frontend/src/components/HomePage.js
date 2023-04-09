@@ -13,7 +13,6 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <div className="home-page">
           <h1 className="home-page-title">Hello, this is our homepage </h1>
           <p className="home-page-text">

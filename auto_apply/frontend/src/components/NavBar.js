@@ -23,7 +23,7 @@ export default class NavBar extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      <div>
         <Nav defaultActiveKey="/home" as="ul">
           <Nav.Item as="li">
             <Nav.Link href="/">Home</Nav.Link>
@@ -38,7 +38,9 @@ export default class NavBar extends Component {
             <Nav.Link eventKey="link-2">Indeed</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link eventKey="/register">Register</Nav.Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
           </Nav.Item>
           <Nav.Item as="li">
             <Button variant="light" onClick={this.handleShowLogin}>
@@ -47,7 +49,6 @@ export default class NavBar extends Component {
           </Nav.Item>
         </Nav>
 
-        
         <Modal show={this.state.showLoginModal} onHide={this.handleCloseLogin}>
           <Modal.Header closeButton>
             <Modal.Title>Login</Modal.Title>
@@ -74,7 +75,7 @@ export default class NavBar extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
-      </BrowserRouter>
+      </div>
     );
   }
 }
