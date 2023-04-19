@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { render } from "react-dom";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
@@ -14,6 +14,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+
 export default class App extends Component {
   constructor(props) {
     super(props);

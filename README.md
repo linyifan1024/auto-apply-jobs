@@ -18,9 +18,13 @@
 
 ## Usage
 
-- Open a terminal and navigate to the project directory.
-- Run the application by executing python main.py in the terminal.
-- The application will automatically log in to each job board, search for the job listings specified in jobs.csv, and apply to each job.
+- Frontend
+  `cd auto_apply/frontend`
+  `npm run dev`
+
+- Backend
+  `cd auto_apply`
+  `python3 manage.py runserver`
 
 ## Disclaimer
 
