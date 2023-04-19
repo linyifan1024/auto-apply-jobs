@@ -24,8 +24,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Change Working Directory
-        run: cd auto_apply
       - name: Run Tests
         run: |
+          cd auto_apply
           python manage.py test
